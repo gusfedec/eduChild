@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "eduChild",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
