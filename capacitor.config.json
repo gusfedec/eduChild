@@ -1,6 +1,11 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "com.gusfedec.eduChild",
 	"appName": "eduChild",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 3000
+		}
+	}
 }
