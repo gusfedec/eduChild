@@ -26,10 +26,6 @@ export class AuthenticationService {
       if (user) {
         console.log(user);
 
-        firebase.default.auth().onAuthStateChanged((user) => {
-          console.log(user);
-        });
-
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user'));

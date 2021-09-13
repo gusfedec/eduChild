@@ -1,0 +1,37 @@
+<ion-header padding>
+  <ion-toolbar class="main-color">
+    <ion-buttons slot="start">
+      <ion-button (click)="goToLoginPage()">
+        <ion-icon name="arrow-back-outline" size="large" class="main-color"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>No Thief</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="signUp()" novalidate>
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="email" placeholder="Correo Electrónico" formControlName="email"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Correo electrónico obligatorio.</span>
+        <span *ngIf="email.errors?.email">Correo electrónico inválido.</span>
+      </div>
+      <ion-item>
+        <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Contraseña obligatoria.</span>
+        <span *ngIf="password.errors?.minlength">Debe tener mínimo 6 caracteres de longitud.</span>
+      </div>
+    </div>
+
+    <ion-button type="submit" expand="block" [disabled]="!registerForm.valid" class="main-color">Registrarse
+    </ion-button>
+  </form>
+
+  <ion-button [routerLink]="['/dashboard']" expand="block" class="main-color" [disabled]="!authService.isLoggedIn">Panel
+    de administración</ion-button>
+</ion-content>

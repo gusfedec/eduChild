@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar class="main-color">
+    <ion-title>Edu Child</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="logIn()" [formGroup]="loginForm">
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="email" placeholder="Correo Electrónico" formControlName="email"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Correo electrónico obligatorio.</span>
+        <span *ngIf="email.errors?.email">Correo electrónico inválido.</span>
+      </div>
+      <ion-item>
+        <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Contraseña obligatoria.</span>
+        <span *ngIf="password.errors?.minlength">Debe tener mínimo 6 caracteres de longitud.</span>
+      </div>
+    </div>
+
+    <ion-button type="submit" expand="block" [disabled]="!loginForm.valid" class="main-color">Iniciar sesión
+    </ion-button>
+    <ion-button type="button" expand="block" color="dark" fill="clear" [routerLink]="['/registration']">No sos usuario?
+      Registrate!
+    </ion-button>
+
+    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('admin')">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Admin
+    </ion-button>
+    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('invitado')">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Invitado
+    </ion-button>
+    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('usuario')">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Usuario
+    </ion-button>
+    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('anonimo')">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Anonimo
+    </ion-button>
+    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('tester')">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Tester
+    </ion-button>
+  </form>
+
+</ion-content>
