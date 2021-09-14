@@ -26,30 +26,42 @@
 
     <ion-button type="submit" expand="block" [disabled]="!loginForm.valid" class="main-color">Iniciar sesión
     </ion-button>
-    <ion-button type="button" expand="block" color="dark" fill="clear" [routerLink]="['/registration']">No sos usuario?
+    <ion-button type="button" expand="block" class="main-color" [routerLink]="['/registration']">No sos usuario?
       Registrate!
     </ion-button>
 
-    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('admin')">
-      <ion-icon name="person" slot="start"></ion-icon>
-      Admin
-    </ion-button>
-    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('invitado')">
-      <ion-icon name="person" slot="start"></ion-icon>
-      Invitado
-    </ion-button>
-    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('usuario')">
-      <ion-icon name="person" slot="start"></ion-icon>
-      Usuario
-    </ion-button>
-    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('anonimo')">
-      <ion-icon name="person" slot="start"></ion-icon>
-      Anonimo
-    </ion-button>
-    <ion-button type="button" expand="block" class="main-color" (click)="loguearAs('tester')">
-      <ion-icon name="person" slot="start"></ion-icon>
-      Tester
-    </ion-button>
   </form>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <img src="./assets/img/joystick.png" style="width:64px;" />
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col class="">
+        <div>
+          <ion-fab-button class="main-color ion-text-center" (click)="loguearAs('admin')">Admin</ion-fab-button>
+        </div>
+      </ion-col>
+      <ion-col class="ion-align-self-center">
+        <ion-fab-button class="main-color" (click)="loguearAs('invitado')">Invitado</ion-fab-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-end">
+      <ion-col class="ion-align-self-end">
+        <ion-fab-button class="main-color" (click)="loguearAs('usuario')">Usuario</ion-fab-button>
+      </ion-col>
+      <ion-col>
+        <ion-fab-button class="main-color" (click)="loguearAs('anonimo')">Anonimo</ion-fab-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-fab-button class="main-color" (click)="loguearAs('tester')">Tester</ion-fab-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
 
 </ion-content>
