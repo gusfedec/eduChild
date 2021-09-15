@@ -25,7 +25,8 @@ export class AuthenticationService {
     this.ngFireAuth.authState.subscribe((user) => {
       if (user) {
         console.log(user);
-
+        //console.log(firebase.default.auth().currentUser);
+        //firebase.default.auth();
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user'));
