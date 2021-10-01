@@ -10,21 +10,69 @@
 </ion-header>
 
 <ion-content>
-
-
+  <ion-row class="ion-align-items-center fila">
+    <ion-col class="ion-text-center">
+      <ion-button *ngIf="botonAnimales" expand="block">Perro</ion-button>
+      <ion-button *ngIf="botonColores" expand="block">Rojo</ion-button>
+      <ion-button *ngIf="botonNumeros" expand="block">Uno</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-align-items-center fila">
+    <ion-col class="ion-text-center">
+      <ion-button *ngIf="botonAnimales" expand="block">Gato</ion-button>
+      <ion-button *ngIf="botonColores" expand="block">Verde</ion-button>
+      <ion-button *ngIf="botonNumeros" expand="block">Dos</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-align-items-center fila">
+    <ion-col class="ion-text-center">
+      <ion-button *ngIf="botonAnimales" expand="block">Pajaro</ion-button>
+      <ion-button *ngIf="botonColores" expand="block">Azul</ion-button>
+      <ion-button *ngIf="botonNumeros" expand="block">Tres</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-align-items-center fila">
+    <ion-col class="ion-text-center">
+      <ion-button *ngIf="botonAnimales" expand="block">Pez</ion-button>
+      <ion-button *ngIf="botonColores" expand="block">Amarillo</ion-button>
+      <ion-button *ngIf="botonNumeros" expand="block">Cuatro</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-align-items-center fila">
+    <ion-col class="ion-text-center">
+      <ion-button *ngIf="botonAnimales" expand="block">Raton</ion-button>
+      <ion-button *ngIf="botonColores" expand="block">Violeta</ion-button>
+      <ion-button *ngIf="botonNumeros" expand="block">Cinco</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-align-items-center fila">
+    <ion-col class="ion-text-end">
+      <ion-icon *ngIf="botonArg" style="font-size: 64px;" src="../assets/img/arg.svg"></ion-icon>
+      <ion-icon *ngIf="botonBra" style="font-size: 64px;" src="../assets/img/br.svg"></ion-icon>
+      <ion-icon *ngIf="botonUk" style="font-size: 64px;" src="../assets/img/uk.svg"></ion-icon>
+    </ion-col>
+    <ion-col class="ion-text-start">
+      <ion-icon *ngIf="botonNumeros" style="font-size: 64px;" src="../assets/img/numeros.svg"></ion-icon>
+      <ion-icon *ngIf="botonColores" style="font-size: 64px;" src="../assets/img/colores.svg"></ion-icon>
+      <ion-icon *ngIf="botonAnimales" style="font-size: 64px;" src="../assets/img/animales.svg"></ion-icon>
+    </ion-col>
+  </ion-row>
   <ion-fab horizontal="start" vertical="bottom" slot="fixed">
     <ion-fab-button color="primary">
       <ion-icon md="flag" ios="flag"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button color="light">
-        <ion-icon src="../assets/img/arg.svg"></ion-icon>
+        <ion-icon (click)="botonArg = !botonArg; botonBra = false; botonUk = false;" src="../assets/img/arg.svg">
+        </ion-icon>
       </ion-fab-button>
       <ion-fab-button color="light">
-        <ion-icon src="../assets/img/br.svg"></ion-icon>
+        <ion-icon (click)="botonBra = !botonBra; botonArg = false; botonUk = false;" src="../assets/img/br.svg">
+        </ion-icon>
       </ion-fab-button>
       <ion-fab-button color="light">
-        <ion-icon src="../assets/img/uk.svg"></ion-icon>
+        <ion-icon (click)="botonUk = !botonUk; botonBra = false; botonArg = false;" src="../assets/img/uk.svg">
+        </ion-icon>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
@@ -35,13 +83,16 @@
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button color="light">
-        <ion-icon src="../assets/img/numeros.svg"></ion-icon>
+        <ion-icon (click)="botonNumeros = !botonNumeros; botonColores = false; botonAnimales = false; "
+          src="../assets/img/numeros.svg"></ion-icon>
       </ion-fab-button>
       <ion-fab-button color="light">
-        <ion-icon src="../assets/img/colores.svg"></ion-icon>
+        <ion-icon (click)="botonColores = !botonColores; botonNumeros = false; botonAnimales = false;"
+          src="../assets/img/colores.svg"></ion-icon>
       </ion-fab-button>
       <ion-fab-button color="light">
-        <ion-icon src="../assets/img/animales.svg"></ion-icon>
+        <ion-icon (click)="botonAnimales = !botonAnimales; botonColores = false; botonNumeros = false;"
+          src="../assets/img/animales.svg"></ion-icon>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>

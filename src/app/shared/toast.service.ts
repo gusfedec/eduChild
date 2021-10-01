@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
 @Injectable({
   providedIn: 'root',
 })
@@ -9,7 +10,8 @@ export class ToastService {
 
   constructor(
     public toastController: ToastController,
-    public loadingController: LoadingController
+    public loadingController: LoadingController,
+    private nativeAudio: NativeAudio
   ) {}
 
   async presentToast(msg) {
@@ -51,5 +53,29 @@ export class ToastService {
 
   cancelLoading() {
     this.loading.dismiss();
+  }
+
+  async preloadAudio(audioId, pathAudio) {
+    try {
+      const a = await this.nativeAudio.preloadComplex(
+        audioId,
+        pathAudio, //'assets/audios/animales/bird.mp3',
+        1,
+        1,
+        0
+      );
+      console.log(a);
+    } catch (e) {
+      console.log('error preload', e);
+    }
+  }
+
+  async playAudio(audioId) {
+    try {
+      const a = await this.nativeAudio.play(audioId);
+      console.log(a);
+    } catch (e) {
+      console.log('error play', e);
+    }
   }
 }
