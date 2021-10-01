@@ -136,6 +136,68 @@ export class AppComponent {
         'audioRojo',
         'assets/audios/colores/rojo.mp3'
       );
+
+      //Precarga de audios de numeros
+      this.toastService.preloadAudio(
+        'audioOne',
+        'assets/audios/numeros/one.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioTwo',
+        'assets/audios/numeros/two.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioThree',
+        'assets/audios/numeros/three.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioFour',
+        'assets/audios/numeros/four.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioFive',
+        'assets/audios/numeros/five.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioUnoBra',
+        'assets/audios/numeros/uno_brasil.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioDosBra',
+        'assets/audios/numeros/dos_brasil.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioTresBra',
+        'assets/audios/numeros/tres_brasil.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioCuatroBra',
+        'assets/audios/numeros/cuatro_brasil.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioCincoBra',
+        'assets/audios/numeros/cinco_brasil.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioUno',
+        'assets/audios/numeros/uno.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioDos',
+        'assets/audios/numeros/dos.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioTres',
+        'assets/audios/numeros/tres.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioCuatro',
+        'assets/audios/numeros/cuatro.mp3'
+      );
+      this.toastService.preloadAudio(
+        'audioCinco',
+        'assets/audios/numeros/cinco.mp3'
+      );
     });
   }
 }
