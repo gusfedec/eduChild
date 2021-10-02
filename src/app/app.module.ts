@@ -14,9 +14,10 @@ import { environment } from '../environments/environment';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { GetUserFromEmail } from './get-user-from-email.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, GetUserFromEmail],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -32,6 +33,7 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
   providers: [
     AngularFirestoreModule,
     NativeAudio,
+    GetUserFromEmail,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],

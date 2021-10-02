@@ -8,13 +8,11 @@ import { PrincipalPageRoutingModule } from './principal-routing.module';
 
 import { PrincipalPage } from './principal.page';
 
+import { GetUserFromEmail } from '../get-user-from-email.pipe';
+import { LogoutComponent } from '../logout/logout.component';
+
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    PrincipalPageRoutingModule
-  ],
-  declarations: [PrincipalPage]
+  imports: [CommonModule, FormsModule, IonicModule, PrincipalPageRoutingModule],
+  declarations: [PrincipalPage, GetUserFromEmail, LogoutComponent],
 })
 export class PrincipalPageModule {}
