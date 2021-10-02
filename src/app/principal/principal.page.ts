@@ -16,9 +16,6 @@ export class PrincipalPage implements OnInit {
   botonNumeros: Boolean = false;
 
   ngOnInit() {
-    this.toastService.playAudio('audioBird');
-    this.toastService.playAudio('audioCat');
-
     /* this.nativeAudio
       .loop('uniqueId2')
       .then((sound) => {})
@@ -38,5 +35,9 @@ export class PrincipalPage implements OnInit {
       .unload('uniqueId1')
       .then((sound) => {})
       .catch((err) => {}); */
+  }
+
+  reproducir(audioId) {
+    this.toastService.playAudio(audioId);
   }
 }
