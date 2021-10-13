@@ -6,12 +6,11 @@ import { GetUserFromEmail } from '../get-user-from-email.pipe';
 
 @Component({
   selector: 'app-logout',
-  template: ` <ion-text>{{ usuario.email | getUserFromEmail }}</ion-text>
-    <ion-icon
-      name="log-out-outline"
-      (click)="signOut()"
-      style="font-size:40px; vertical-align:middle;"
-    ></ion-icon>`,
+  template: ` <ion-icon
+    name="log-out-outline"
+    (click)="signOut()"
+    style="font-size:40px; vertical-align:middle;"
+  ></ion-icon>`,
   styleUrls: ['./logout.component.scss'],
 })
 export class LogoutComponent implements OnInit {
