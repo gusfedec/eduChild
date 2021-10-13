@@ -15,87 +15,151 @@
 </ion-header>
 
 <ion-content>
-  <ion-row class="ion-align-items-center fila">
-    <ion-col class="ion-text-center">
-      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioPerro');" expand="block">Perro
+  <ion-row class="fila">
+    <ion-col size="12" class="ion-text-center">
+      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioPerro');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/perro.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioPerroBra');" expand="block">Cachorro
+      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioPerroBra');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/perro.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioDog');" expand="block">dog</ion-button>
-      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioRojo')" expand="block">Rojo</ion-button>
-      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioRojoBra')" expand="block">Vermelho
+      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioDog');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/perro.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioRed')" expand="block">Red</ion-button>
-      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioUno')" expand="block">Uno</ion-button>
-      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioUnoBra')" expand="block">1</ion-button>
-      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioOne')" expand="block">One</ion-button>
+      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioRojo')" expand="block"
+        style="--background: red;"></ion-button>
+      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioRojoBra')" expand="block"
+        style="--background: red;">
+      </ion-button>
+      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioRed')" expand="block"
+        style="--background: red;"></ion-button>
+      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioUno')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/uno.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioUnoBra')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/uno.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioOne')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/uno.svg"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
-  <ion-row class="ion-align-items-center fila">
+  <ion-row class="fila">
     <ion-col class="ion-text-center">
-      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioGato');" expand="block">Gato</ion-button>
-      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioGatoBra');" expand="block">Gato
+      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioGato');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/gato.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioCat');" expand="block">Cat</ion-button>
-      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioVerde')" expand="block">Verde</ion-button>
-      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioVerdeBra')" expand="block">Verde
+      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioGatoBra');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/gato.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioGreen')" expand="block">Green</ion-button>
-      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioDos')" expand="block">Dos</ion-button>
-      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioDosBra')" expand="block">Dois</ion-button>
-      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioTwo')" expand="block">Two</ion-button>
+      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioCat');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/gato.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioVerde')" expand="block"
+        style="--background: green;"></ion-button>
+      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioVerdeBra')" expand="block"
+        style="--background: green;">
+      </ion-button>
+      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioGreen')" expand="block"
+        style="--background: green;"></ion-button>
+      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioDos')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/dos.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioDosBra')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/dos.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioTwo')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/dos.svg"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
-  <ion-row class="ion-align-items-center fila">
+  <ion-row class="fila">
     <ion-col class="ion-text-center">
-      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioPajaro');" expand="block">Pajaro
+      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioPajaro');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/pajaro.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioPajaroBra');" expand="block">Pássaro
+      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioPajaroBra');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/pajaro.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioBird');" expand="block">Bird</ion-button>
-      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioAzul')" expand="block">Azul</ion-button>
-      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioAzulBra')" expand="block">Azul
+      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioBird');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/pajaro.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioBlue')" expand="block">Blue</ion-button>
-      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioTres')" expand="block">Tres</ion-button>
-      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioTresBra')" expand="block">Três</ion-button>
-      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioThree')" expand="block">Three</ion-button>
+      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioAzul')" expand="block"
+        style="--background: blue;"></ion-button>
+      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioAzulBra')" expand="block"
+        style="--background: blue;">
+      </ion-button>
+      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioBlue')" expand="block"
+        style="--background: blue;"></ion-button>
+      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioTres')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/tres.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioTresBra')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/tres.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioThree')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/tres.svg"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
-  <ion-row class="ion-align-items-center fila">
+  <ion-row class="fila">
     <ion-col class="ion-text-center">
-      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioPez');" expand="block">Pez</ion-button>
-      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioPezBra');" expand="block">Peixe
+      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioPez');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/pez.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioFish');" expand="block">Fish</ion-button>
-      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioAmarillo')" expand="block">Amarillo
+      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioPezBra');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/pez.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioAmarilloBra')" expand="block">Amarelo
+      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioFish');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/pez.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioYellow')" expand="block">Yellow</ion-button>
-      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioCuatro')" expand="block">Cuatro
+      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioAmarillo')" expand="block"
+        style="--background: yellow;">
       </ion-button>
-      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioCuatroBra')" expand="block">Quatro
+      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioAmarilloBra')" expand="block"
+        style="--background: yellow;">
       </ion-button>
-      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioFour')" expand="block">Four</ion-button>
+      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioYellow')" expand="block"
+        style="--background: yellow;"></ion-button>
+      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioCuatro')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/cuatro.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioCuatroBra')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/cuatro.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioFour')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/cuatro.svg"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
-  <ion-row class="ion-align-items-center fila">
+  <ion-row class="fila">
     <ion-col class="ion-text-center">
-      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioRaton');" expand="block">Raton
+      <ion-button *ngIf="botonAnimales && botonArg" (click)="reproducir('audioRaton');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/raton.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioRatonBra');" expand="block">Mouse
+      <ion-button *ngIf="botonAnimales && botonBra" (click)="reproducir('audioRatonBra');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/raton.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioMouse');" expand="block">Mouse</ion-button>
-      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioVioleta')" expand="block">Violeta
+      <ion-button *ngIf="botonAnimales && botonUk" (click)="reproducir('audioMouse');" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/raton.svg"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioVioletaBra')" expand="block">Tolet
+      <ion-button *ngIf="botonColores && botonArg" (click)="reproducir('audioVioleta')" expand="block"
+        style="--background: rgb(197, 22, 174);">
       </ion-button>
-      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioPurple')" expand="block">Purple</ion-button>
-      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioCinco')" expand="block">Cinco</ion-button>
-      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioCincoBra')" expand="block">Cinco
+      <ion-button *ngIf="botonColores && botonBra" (click)="reproducir('audioVioletaBra')" expand="block"
+        style="--background: rgb(197, 22, 174);">
       </ion-button>
-      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioFive')" expand="block">Five</ion-button>
+      <ion-button *ngIf="botonColores && botonUk" (click)="reproducir('audioPurple')" expand="block"
+        style="--background: rgb(197, 22, 174);"></ion-button>
+      <ion-button *ngIf="botonNumeros && botonArg" (click)="reproducir('audioCinco')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/cinco.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonBra" (click)="reproducir('audioCincoBra')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/cinco.svg"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="botonNumeros && botonUk" (click)="reproducir('audioFive')" expand="block">
+        <ion-icon style="font-size: 64px;" slot="icon-only" src="../assets/img/cinco.svg"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
   <ion-row class="ion-align-items-center fila">
