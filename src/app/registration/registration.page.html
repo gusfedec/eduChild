@@ -5,7 +5,7 @@
         <ion-icon name="arrow-back-outline" size="large" class="main-color"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Edu Child</ion-title>
+    <ion-title>Educacion y Juegos</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -28,11 +28,12 @@
       </div>
     </div>
 
-    <ion-button type="submit" expand="block" [disabled]="!registerForm.valid" class="main-color">Registrarse
+    <ion-button type="submit" expand="block" [disabled]="!registerForm.valid" class="color-button">Registrarse
     </ion-button>
   </form>
 
-  <ion-button [routerLink]="['/dashboard']" expand="block" class="main-color" [disabled]="!authService.isLoggedIn">Panel
+  <ion-button [routerLink]="['/dashboard']" expand="block" class="color-button" [disabled]="!authService.isLoggedIn">
+    Panel
     de administración</ion-button>
   <img src="./assets/img/joystick.png" style="width:256px;" />
 </ion-content>
