@@ -14,21 +14,19 @@ import { GetUserFromEmail } from '../get-user-from-email.pipe';
   styleUrls: ['./logout.component.scss'],
 })
 export class LogoutComponent implements OnInit {
-  usuario: any;
   cargando: boolean = false;
 
   constructor(
     public authService: AuthenticationService,
     public toastService: ToastService,
     public user: GetUserFromEmail
-  ) {
-    this.usuario = this.authService.getUsuario();
-    console.log(this.authService.getUsuario());
-    console.log(this.authService.isLogged);
-    console.log(this.usuario);
-  }
+  ) {}
 
-  ngOnInit() {}
+  async ngOnInit() {
+    let isLog = await this.authService.isLoggedInn();
+    console.log(isLog);
+    console.log(isLog.email);
+  }
 
   signOut() {
     this.toastService.presentLoadingWithOptions();
